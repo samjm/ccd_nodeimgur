@@ -64,25 +64,25 @@ app.post('/add', (req,res) => {
     console.log(base64str);
 
       //API imgur
-      request({
-              url: 'https://api.imgur.com/3/upload',
-              headers: {
-                Authorization: 'Client-ID ' + 'a9a84f7cbe3ce34'
-              },
-              data:{
-                image: base64str,//"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==".replace(/.*,/, ''),//base64_encode('turismo-02.jpg'),
-                type: 'base64'
-              }
-        }, function (error, response, body) {
-              if (!error && response.statusCode == 200) {
-                var info = JSON.parse(body);
-                console.log(info);
-              }else{
-                var info = JSON.parse(body);
-                console.log(info);
-                console.log(response.statusCode);
-              }
-      });
+      // request({
+      //         url: 'https://api.imgur.com/3/upload',
+      //         headers: {
+      //           Authorization: 'Client-ID ' + 'a9a84f7cbe3ce34'
+      //         },
+      //         data:{
+      //           image: base64str,//"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==".replace(/.*,/, ''),//base64_encode('turismo-02.jpg'),
+      //           type: 'base64'
+      //         }
+      //   }, function (error, response, body) {
+      //         if (!error && response.statusCode == 200) {
+      //           var info = JSON.parse(body);
+      //           console.log(info);
+      //         }else{
+      //           var info = JSON.parse(body);
+      //           console.log(info);
+      //           console.log(response.statusCode);
+      //         }
+      // });
 
       ///Inserta en bd
       form.on('end', function () {
