@@ -7,13 +7,16 @@ var request = require('request');
 
 var fs = require('fs');
 
+// set the port of our application
+// process.env.PORT lets the port be set by Heroku
+var port = process.env.PORT || 8080;
 
 MongoClient.connect('mongodb://samjm1618:a27796@ds141490.mlab.com:41490/ccdbd', (err, database) => {
 	if(err) return console.log(err)
 		db=database
 
-	app.listen(3000, function(){
-		console.log('Conexion realizada : port 3000')
+	app.listen(port, function(){
+		console.log('Conexion realizada : port ' + port)
 	})
 
 })
