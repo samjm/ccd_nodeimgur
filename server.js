@@ -53,15 +53,15 @@ app.post('/add', (req,res) => {
 
       var filePath="";
 
-      var base64str = "";//base64_encode('turismo-02.jpg').replace(/.*,/, '');
-      form.on('fileBegin', function (name, file){
-          file.path = __dirname + '\\public\\' /*'/public/'*/ + file.name;
-          console.log(file.path);
-          base64str =  base64_encode(file.path);
-          filePath = file.path;
-      });
-
-    console.log(base64str);
+    //   var base64str = "";//base64_encode('turismo-02.jpg').replace(/.*,/, '');
+    //   form.on('fileBegin', function (name, file){
+    //       file.path = __dirname + '\\public\\' /*'/public/'*/ + file.name;
+    //       console.log(file.path);
+    //       base64str =  base64_encode(file.path);
+    //       filePath = file.path;
+    //   });
+		//
+    // console.log(base64str);
 
       //API imgur
       // request({
